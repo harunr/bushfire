@@ -1,0 +1,381 @@
+
+/* Fonts style */
+
+@font-face {
+    font-family: 'Bowie-Black';
+    src: url('../fonts/Bowie-Black.eot?#iefix') format('embedded-opentype'),  
+        url('../fonts/Bowie-Black.otf')  format('opentype'),
+        url('../fonts/Bowie-Black.woff') format('woff'), 
+        url('../fonts/Bowie-Black.ttf')  format('truetype'), 
+        url('../fonts/Bowie-Black.svg#Bowie-Black') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bowie-Bold';
+    src: url('../fonts/Bowie-Bold.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/Bowie-Bold.otf')  format('opentype'),
+        url('../fonts/Bowie-Bold.woff') format('woff'), 
+        url('../fonts/Bowie-Bold.ttf')  format('truetype'), 
+        url('../fonts/Bowie-Bold.svg#Bowie-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bowie-Regular';
+    src: url('../fonts/Bowie-Regular.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/Bowie-Regular.otf')  format('opentype'),
+        url('../fonts/Bowie-Regular.woff') format('woff'), 
+        url('../fonts/Bowie-Regular.ttf')  format('truetype'),
+        url('../fonts/Bowie-Regular.svg#Bowie-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* // End Fonts style */
+
+
+
+
+
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+ul{ 
+    list-style: none;
+}
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+.clear:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
+a img{
+    border:0;
+}
+a,input,select,textarea{
+    outline:none;
+}
+input::-moz-focus-inner{
+    border:0; padding: 0;
+}
+a{ margin: 0; padding: 0;}
+img{
+    float: left;
+}
+
+/* Selection colours (easy to forget) */
+
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+a{text-decoration: none; display: inline-block;/* -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out;*/}
+/*a:hover{text-decoration: underline; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}*/
+
+
+
+/*		Default Layout 
+-------------------------------------------------------------------------------
+*/
+
+body {background: rgb(255,255,255); color: rgb(60,60,60); -webkit-text-size-adjust: 100%; -moz-text-size-adjust:100%; -moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased; overflow-x: hidden; overflow-y:scroll;font-family: 'Bowie-Regular'; font-weight: normal; font-style: normal;}
+
+*{-webkit-box-sizing: border-box;-moz-box-sizing:border-box; box-sizing: border-box;}
+
+.main-wrap{ float: left; width: 100%; height: 100%; position: relative;}
+.inner-wrap{ float: left; width: 100%; height: 100%; background:url(../images/inner-bg.png) repeat; }
+.top-header{left: 0; top: 0;z-index: 100; float: left; width: 100%; background: #ED2E24;-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+    box-shadow: 0px 0px 10px rgba(0,0,0,.8);  z-index: 500; position: relative}
+
+.common-wrap{ margin: 0 auto; max-width: 1170px; padding: 0 15px; clear: both; position: relative}
+.top-logo{ float: left; width: 210px;}
+.top-logo a{ float: left; width: 210px; margin: 0; padding: 0;text-decoration: none;}
+.top-logo img{ float: left; width:100%;}
+.top-right-section{ float: right; max-width: 400px; width: 100% }
+.sponsor{ float: left; width: 227px; font-size: 19px; line-height: 19px; text-transform: uppercase;  font-family: 'Bowie-Black'; font-weight: normal; font-style: normal; padding: 7px 0 0 9px}
+.sponsor a{ float: left; width: 100%; display: inline-block; margin: 0; padding: 0;}
+.sponsor a img{float: left; width:32px;}
+.sponsor a span{float: left; display: inline-block; padding-top: 20px;color: #ffffff;font-family: 'Bowie-Black'; font-weight: normal; font-style: normal;}
+.top-social-icon{float: left; width:133px; margin: 18px 0 0 31px}
+.top-social-icon a{ float: left; width:31px; margin-left: 20px;}
+.top-social-icon a:first-child{ margin-left:0px;}
+.top-social-icon a img{ float: left; width: 100%}
+.nav-section{float:left; width: 100%;}
+.nav-section.sticky{position: fixed; left: 0; top: 0; float: left; width: 100%;z-index: 500; background: #ffffff;transition: all 0.3s ease-in-out;-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out; }
+/*----Beginning Hero Section--*/
+.hero-section{ float: left; width: 100%;}
+.home-hero{ float: left; position:relative;width: 100%;}
+.slider-wrap{float: left; width: 100%;}
+.slider-wrap li.slide, .slider-wrap{float: left; width: 100%; min-height: 404px;}
+.slider-overlay{position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+figure,figure img{ float: left; width: 100%; position: relative}
+figure a{display: block;}
+.main-logo{float: left; max-width:396px; width:34.73684210526316%; position: absolute; left: 15px; top: 50%; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); transform: translateY(-50%);}
+.main-logo img{float: left; width:100% }
+.festival-icon{ float:right;max-width: 549px; width:48.15789473684211%;}
+.bbc-text{ position: absolute; left:0;; top: 33%; width: 100%; text-align: center}
+.festival-icon a{text-align: center; clear: both;display: inline-block;text-transform: uppercase;font-size: 27px; line-height: 27px; color: #ea3336; font-family: 'Bowie-Black'; font-weight: normal; font-style: normal; margin-left: 47px}
+.sponsor-logo{ position: absolute; right:10px; bottom:11px; clear: both; width: 154px; z-index: 10}
+.sponsor-logo a{ display: block}
+.sponsor-logo img{ float: left; width: 100%;}
+
+.home-gallery{ float: left; width: 100%;}
+.main-nav{ float: left; width: 100%; background: #ffffff;}
+.main-nav ul{ list-style: none; margin: 0; padding: 0;}
+.main-nav ul li{ float: left; display: inline-block;}
+.main-nav ul li a{ text-decoration: none; position: relative;font-size: 23px; line-height: 23px; color: #00344c; text-transform: uppercase; padding: 21.5px 22.5px; font-family: 'Bowie-Regular'; font-weight: normal; font-style: normal;transition: all 0.3s ease-in-out;-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;}
+.main-nav ul li a:hover ,.main-nav ul li.active{ background: #FFBF00; color: #ea3336;transition: all 0.3s ease-in-out;-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;}
+.main-nav ul li a:after{ float: right; position: absolute; right: -8px; top: 24px; content: ''; width: 17px; height: 17px; background: url(../images/star-icon.png) no-repeat 0 0;z-index: 10;}
+.main-nav ul li:last-child a:after{display: none}
+.mobi{ display: none}
+.mobi-nav{ position: absolute; right:15px; top: 15px; width:23px;  z-index: 100; display: none}
+.mobi-nav > div{ float: left; width: 100%; height: 3px; margin-bottom: 3px;background: #000000 }
+.mobi-nav > div:last-child{ margin-bottom: 0px}
+
+
+
+
+
+/*--Beginning Home Gallery Section---*/
+.home-gallery-wrap{ float: left; width: 100%;}
+.home-gallery-item{ float: left; max-width: 380px; width:33.33333333333333%; position: relative;}
+.home-gallery-item img{ float: left; width: 100%; }
+.gallery-overlay,.explore-overlay{ float: left; width: 100%; height: 100%; position: absolute;left: 0; top: 0;z-index: 10;display: -webkit-flex; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: flex; -webkit-flex-flow: row wrap; flex-flow: row wrap; align-items: center; text-align: center}
+.gallery-overlay a,.explore-overlay a{ text-align: center;; margin: 0 auto;display: inline-block;text-decoration: none; font-size: 43px; line-height: 43px; color: #f6e1c2; position: relative;font-family: 'Bowie-Black'; font-weight: normal; font-style: normal;}
+.gallery-overlay a:before{ position: absolute; left:50%; top: -7px; content: ''; width: 186px; height: 6px; background: url(../images/gallery-line-icon.png) no-repeat 0 0; margin-left: -93px }
+.gallery-overlay a:after{ position: absolute; left:50%; bottom: -7px; content: ''; width: 186px; height: 6px; background: url(../images/gallery-line-icon.png) no-repeat 0 0; margin-left: -93px }
+/*--End Home Gallery Section---*/
+
+/*--Beginning Lattest-News Section---*/
+.lattest-news-section{ float:left; width: 100%; background: url(../images/lattest-new-bg.png) repeat; padding-bottom: 37px}
+.lattest-top{ float: left; width: 100%; background:url(../images/lattest-top-bg.png) repeat; padding: 15.5px 0}
+.lattest-top .common-wrap h3,.video-title-wrap h3,.fb-title-wrap h3{ float:left; font-size: 28px; line-height: 33px; color: #ea3336; text-transform: uppercase; padding-left: 33px; font-family: 'Bowie-Black'; font-weight: normal; font-style: normal;}
+.lattest-common{ max-width: 1140px; padding: 0 10px;}
+.news-item{ float: left; max-width: 360px; width:32.14285714285714%; margin-left: 1.785714285714286%; padding-top: 29px }
+.news-item:first-child{ margin-left: 0px}
+.news-text{ float: left; width: 100%; padding-top: 23px;}
+.news-text h4{ float: left; width: 100%; font-size: 25px; line-height: 26px; color: #00344c;font-family: 'arial', sans-serif; font-weight: bold}
+.news-text p,.news-text a{float: left; font-size: 14px; line-height:17px; color: #00344c; font-family: 'arial', sans-serif; font-weight: bold;}
+.news-text p{width: 100%; padding-top: 16px;}
+.read-more-btn{margin-top: 17px; position: relative;}
+.read-more-btn:after{position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background: #00344c; content: ""; opacity: 1; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+.read-more-btn:hover:after{opacity: 0; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+.news-text p{font-weight: normal}
+.news-text a{display: inline-block;}
+.news-text a:hover{ text-decoration: none}
+/*--End Lattest-News Section---*/
+
+/*--Beginning Video Section---*/
+.video-facebook-wrap{ float: left; width: 100%; position: relative; background:#ffffff; padding-bottom: 21px}
+.top-marking-wrap{float:left; width: 100%;}
+.top-video-wrap{ float: left; width:100%;background:url(../images/lattest-top-bg.png) repeat; min-height: 64px; position: relative}
+.top-fb-wrap{ float: left; width: 39.9999%;background:url(../images/top-fb-bg.png) repeat; min-height: 64px; position: absolute;right: 0; top: 0;z-index:1}
+.top-video-wrap .common-wrap,.top-marking-wrap .common-wrap{ position: relative;max-width: 1140px; padding:0 10px;z-index:5 }
+.video-title-wrap{ float: left;max-width: 750px; width:66.96428571428571%;background:url(../images/lattest-top-bg.png) repeat; min-height: 64px;}
+.fb-title-wrap{ float: left; max-width: 370px; width:33.03571428571429%;background:url(../images/top-fb-bg.png) repeat;min-height: 64px; }
+.video-title-wrap h3,.fb-title-wrap h3{ padding:15.5px 0 15.5px 0px}
+.fb-title-wrap h3{color: #ffbe0f; padding-left: 13px}
+.video-details{ float: left; width: 100%; padding:21px 0 0 0}
+.bushfire-video{ float: left; max-width: 740px; width:66.07142857142857%;}
+.fb-feed{ float: left; max-width:360px; width:32.14285714285714%; margin-left:1.785714285714286%}
+.mobi-fb{ display: none;}
+
+/*--End Video Section---*/
+
+/*--Beginning Explore Section---*/
+.page-details-wrap{ float: left; width: 100%;background: url(../images/lattest-new-bg.png) repeat; padding:25px 0 75px 0}
+.aside-nav{ float: left; max-width: 390px; width:34.21052631578947%; padding: 0 56px 0 41px; }
+.aside-nav span{float: left; width: 100%; display: inline-block;font-size: 18px;line-height: 36px; padding-left: 9px; color: #ea3336;font-family: 'Bowie-Bold'; font-weight: normal; font-style: normal; }
+.aside-nav ul{ list-style: none; margin: 0; padding: 0;}
+.aside-nav ul li{ float: left; width: 100%; display: inline-block; position: relative}
+.aside-nav ul li a{float: left; width: 100%; display: inline-block; padding-left: 9px; border-top: 2px solid #ffbe0f; font-size: 18px;text-decoration: none;display: inline-block; text-transform: uppercase;line-height: 33px; color: #00344c;font-family: 'Bowie-Regular'; font-weight: normal; font-style: normal; position: relative; transition: all 0.3s ease-in-out;-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;}
+.aside-nav ul li a:hover ,.aside-nav ul li.active a{ background: #ffbe0f; color: #ea3336;transition: all 0.3s ease-in-out;-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;}
+.aside-nav ul li a:after{float: right; right:5px; top:15px; content: ''; width: 5px; height: 7px; background: url(../images/li-arrow.png) no-repeat 0 0; position: absolute;}
+.project-details{ float: left; max-width: 750px; width: 65.78947368421053%; padding-right: 10px }
+.project-nav{ float: left; width: 100%; padding-top: 4px }
+.project-nav ul{list-style: none; margin: 0; padding: 0;}
+.project-nav ul li{ float: left;display: inline-block; margin-left:16px}
+.project-nav ul li a{display: inline-block; font-size:16px; line-height: 35px; padding: 0 9px;text-transform: uppercase; color: #ffffff; font-family: 'Bowie-Regular'; font-weight: normal; font-style: normal; background: #E7B1B3;transition: all 0.3s ease-in-out;-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;}
+.project-nav ul li:first-child{margin-left: 0px}
+.project-nav ul li a:hover ,.project-nav ul li.active a,.previous a:hover,.next a:hover{background: #EA3336; color: #ffffff;transition: all 0.3s ease-in-out;-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;}
+.explore-gallery{ float:left; width: 100%}
+.explore-item{ float: left; max-width: 360px; width:48.64864864864865%;margin-left: 2.702702702702703%; margin-top:19px; position: relative}
+.explore-item:nth-child(odd){ margin-left: 0px}
+.previous,.next{ float: left; width: 118px; padding-top: 18px}
+.next{ float: right}
+.previous a,.next a{ text-align: center;width: 100%; font-size: 18px; line-height: 36px; color: #ffffff;font-family: 'arial', sans-serif; font-weight:normal; text-transform: uppercase; background: #EE9395; transition: all 0.3s ease-in-out;-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;}
+/*--End Explore Section---*/
+
+
+
+
+
+
+
+/*----Beginning Footer Section ------*/
+.footer-section{ float: left; width: 100%; padding-bottom: 70px}
+.footer-section .common-wrap{ max-width: 1140px; padding: 0 10px}
+.foooter-item{ float: left; max-width: 360px; width:32.14285714285714%;  margin:47px 0 0 1.785714285714286%; border-top: 2px solid #011721 }
+.foooter-item:first-child{ margin-left: 0px; }
+.foooter-item h6,.footer-social-icon h6,.information-nav h6{ float: left; font-size: 13px; line-height: 14px; color: #fdc131;font-family: 'arial', sans-serif; font-weight: bold; padding-top: 18px}
+.footer-brand{ float: left; width: 100%; padding-top: 25px}
+.footer-brand a{ float: left;max-width: 114px; width:31.66666666666667%;}
+.information-nav,.footer-social-icon{ float: left; width: 50%; padding-top: 18px}
+.information-nav ul{ list-style: none; margin: 0; padding: 0;}
+.information-nav ul li{ float: left; display: block; width: 100%;}
+.information-nav ul li a{font-size: 13px; display: inline-block;line-height: 20px;font-family: 'arial', sans-serif; font-weight: normal; color: #ffffff;}
+.footer-social{ float: left; width: 100%; padding-top: 18px}
+.footer-social a{ float: left; display: inline-block; text-decoration: none;width: 31px; margin:0 0 0 19px;}
+.footer-social a img{ float: left; width: 100%; }
+.footer-social-icon h6,.information-nav h6{ padding: 0;}
+.footer-social-icon{padding-left: 16px}
+.footer-social a:first-child{ margin-left: 0px}
+.mail-wrap{ float: left; width: 100%; padding-top: 21px}
+.mail-wrap span{ float: left; width: 100%; display: inline-block; font-size: 13px; line-height: 20px;font-family: 'arial', sans-serif; font-weight: normal; color: #ffffff}
+.mail-wrap span a{ color: #ffffff;font-family: 'arial', sans-serif; font-weight: normal;padding-left: 5px}
+.information-nav ul li a:hover, .mail-wrap span a:hover{ text-decoration: underline}
+.information-nav h6{ padding-bottom: 17px}
+/*----End Footer Section ------*/
+
+
+/* =======================================================================================================
+============================================ Responsive style ========================================== */
+
+/*		Mobile Layout: 320px and 480px and more but less than or equal to 767px.
+----------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 767px) {
+	input[type="text"],input[type="submit"],input[type="password"],select{-webkit-appearance:none;-moz-appearance:none;appearance:none; border-radius: 0}
+    .main-nav{ display: none; padding:20px 0; width: 100%}
+    .mobi-nav,.top-social-icon.mobi{ display: block}
+    .top-right-section,.festival-icon{ display: none}
+    .main-nav ul{ text-align: center;display: inline-block;width: 100%;}
+    .main-nav ul li{ text-align: center;display: inline-block;width: 100%;}
+    .main-nav ul li a { font-size:15px; line-height: 23px; padding: 3px 10px;}
+    .top-social-icon{ float: none;margin: 0 auto; clear: both; }
+    .sponsor-logo{display: none}
+    .home-gallery-item{ width: 100%; max-width: 100%; margin: 0;}
+    .news-item{ max-width: 100%; width: 100%}
+    .gallery-overlay a,.explore-overlay a{ font-size: 30px; line-height: 36px}
+    .explore-overlay a{ font-size: 28px; line-height: 36px}
+    .video-title-wrap,.bushfire-video{ width: 100%; max-width: 100%; padding: 0 10px}
+    .fb-title-wrap,.top-fb-wrap{ display: none}
+    .mobi-fb{ display: block; max-width: 100%; width: 100%; margin-top: 15px}
+    .top-marking-wrap .common-wrap{ padding: 0}
+    .lattest-top .common-wrap h3, .video-title-wrap h3, .fb-title-wrap h3{ font-size: 20px; line-height: 26px; padding: 10px 0}
+    .fb-title-wrap h3{ padding: 10px}
+    .video-title-wrap,.top-video-wrap,.fb-title-wrap{ min-height: 49px}
+    .fb-feed{ max-width: 100%; width: 100%; padding: 15px 10px 0 10px; margin: 0;}
+    .foooter-item{ width: 100%; max-width: 100%; margin: 25px 0 0 0}
+    .main-nav ul li a:after{ background-size: contain; width: 12px; height: 12px; top: 7px; right: -11px}
+    .top-logo a{ width: 145px}
+    .lattest-top{ padding: 1.5px 0}
+    .top-header .common-wrap{ padding: 0}
+    .main-nav ul li:last-child a:after{ display: block}
+    .aside-nav{ max-width: 100%; width: 100%; padding: 0 48.5px}
+    .aside-nav ul li a{ font-size: 16px; line-height: 24px}
+    .project-details{ max-width: 100%; width: 100%; padding-right: 0px}
+    .explore-item{ max-width: 100%; width: 100%; margin-left: 0px}
+    .project-nav{ text-align: center; padding-top: 30px}
+    .project-nav ul{ text-align: center; width: 100%; display: inline-block}
+    .project-nav ul li{ width: 100%; display:block; margin: 10px 0 0 0}
+    .project-nav ul li a{ width: 100%; }
+    .page-details-wrap{ padding-bottom: 32px}
+    .aside-nav ul li a:after{ top: 9px}
+    
+    .slider-wrap li.slide, .slider-wrap{min-height: 120px;}
+    .top-header{position: fixed; left: 0; top: 1; margin-top: -1px;}
+    .hero-section{padding-top: 44px;}
+    .footer-section{padding-bottom: 20px;}
+    .foooter-item h6{padding-top: 25px;}
+    .foooter-item:first-child{margin-top: 30px;}
+    
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .slider-wrap li.slide, .slider-wrap{min-height: 190px;}
+
+}
+
+
+/*		Tablet Layout: 768px.
+-----------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	input[type="text"],input[type="submit"],input[type="password"],select{-webkit-appearance:none;-moz-appearance:none;appearance:none; border-radius: 0}
+    
+    .festival-icon a{ font-size: 18px; line-height: 23px; margin-left: 21px}
+    .gallery-overlay a,.lattest-top .common-wrap h3, .video-title-wrap h3, .fb-title-wrap h3,.explore-overlay a{ font-size: 26px; line-height: 30px}
+    .foooter-item:first-child{ width: 100%; max-width: 100%;}
+    .foooter-item:nth-child(2){ width: 58%; max-width: 58%; margin-left: 0px}
+    .foooter-item:nth-child(3){ width: 40%; max-width: 40%;}
+    .main-nav ul li a{ font-size: 14px; line-height: 20px; padding: 16.5px;}
+    .main-nav ul li a:after{ top: 17px}
+    .project-nav ul{ text-align: center; width: 100%; display: inline-block}
+    .project-nav ul li{float: none;width: 100%; margin: 10px 0 0 0}
+    .project-nav ul li a{width: 100%}
+    .aside-nav{ padding: 0 14px 0 0}
+    
+    .slider-wrap li.slide,.slider-wrap{min-height: 250px;}
+    
+	
+}
+
+
+/*		Tablet Layout: 1024px.
+-----------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+	input[type="text"],input[type="submit"],input[type="password"],select{-webkit-appearance:none;-moz-appearance:none;appearance:none; border-radius: 0}
+    .festival-icon a{ font-size: 26px; margin-left: 24px}
+    .main-nav ul li a{ font-size: 20px; padding: 19.5px}
+    .project-nav ul li a{ font-size: 14px}
+    .project-nav ul li{ margin-left: 7px}
+    
+    .slider-wrap li.slide,.slider-wrap{min-height: 340px;}
+}
+
+
+
+
+/*	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+-----------------------------------------------    */
+
+@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-device-pixel-ratio: 2) {
+	
+	
+}
+
+
+
+
+
+
+
